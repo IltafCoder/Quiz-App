@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="main.css">
+    <script src="main.js"></script>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+</head>
+
+<body>
+
+    <header>
+        <nav class="nav-bar">        
+            <div>
+                <img src="logo.png" alt="logo">
+                <label>&nbspQuiz</label>
+            </div>
+            <ul>
+                <li ><a href="index.html" id="index-tab">Home</a></li>
+                <li ><a href="test.html" onclick="testStart()" id="test-tab">Test</a></li>
+                <li ><a href="score.html" id="score-tab">Score</a></li>
+                <li ><a href="#about" id="about-tab">About</a></li>
+                <li ><a href="#contact" id="contact-tab">Contact</a></li>
+                <li id="three-bars" onclick="showMenuBar()"><i class="fa fa-bars"></i></li>
+            </ul>
+        </nav>
+        <div class="menu-bar" >
+            <ul>
+                <li><a href="index.html" id="index-tab">Home</a></li>
+                <li ><a href="test.html" onclick="testStart()" id="test-tab">Test</a></li>
+                <li onclick="showScore()"><a href="score.html" id="score-tab">Score</a></li>
+                <li ><a href="#about" id="about-tab">About</a></li>
+                <li ><a href="#contact" id="contact-tab">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="test" onclick="hideMenuBar()">
+
+
+        <h1 id="test-start" style="border-radius: 10px;">Do You Want To Begin The Quiz Now?</h1>
+        <div id="btn-start">
+            <button onclick="nextQuestion()">Begin Test!</button>
+        </div>
+
+        <div class="quiz-holder" style="display: none;">
+            <label></label>
+
+            <label><input type="radio" name="ans"></label>
+            <label><input type="radio" name="ans"></label>
+            <label><input type="radio" name="ans"></label>
+            <label><input type="radio" name="ans"></label>
+        </div> 
+        <button onclick="nextQuestion()" style="display: none;" id="next-btn">Next</button>
+
+        <div class="my-score">
+            <label>Score</label>
+            <label>Total Score: 100</label>
+            <label>Your Score:</label>
+            <label>Your Grade:</label>
+        </div>
+        <div id="try-again-btn"><a href="test.html"><button>Try Again!</button></a></div>
+    </section>
+
+
+</body>
+
+</html>

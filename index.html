@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="main.css">
+    <script src="main.js"></script>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+</head>
+
+<body>
+
+    <video autoplay muted loop class="bg-video">
+        <source src="bg-video.mp4" type="video/mp4">
+      </video>  
+
+    <header>
+        <nav class="nav-bar">
+            <div>
+                <img src="logo.png" alt="logo">
+                <label>&nbspQuiz</label>
+            </div>
+            <ul>
+                <li><a href="index.html" id="index-tab">Home</a></li>
+                <li ><a href="test.html" onclick="testStart()" id="test-tab">Test</a></li>
+                <li  onclick="showScore()"><a href="score.html" id="score-tab">Score</a></li>
+                <li ><a href="#about" id="about-tab">About</a></li>
+                <li ><a href="#contact" id="contact-tab">Contact</a></li>
+                <li id="three-bars" onclick="showMenuBar()" ><i class="fa fa-bars"></i></li>
+            </ul>
+        </nav>
+
+        <div class="menu-bar" >
+            <ul>
+                <li><a href="index.html" id="index-tab">Home</a></li>
+                <li ><a href="test.html" onclick="testStart()" id="test-tab">Test</a></li>
+                <li onclick="showScore()"><a href="score.html" id="score-tab">Score</a></li>
+                <li ><a href="#about" id="about-tab">About</a></li>
+                <li ><a href="#contact" id="contact-tab">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="home" id="home" onclick="hideMenuBar()">
+
+        <h1>Welcome To JavaScript Quiz!</h1>
+        <div>
+            <h2><span class="auto-type"></span></h2>
+        </div>
+        <div>
+            <p>A JavaScript basics quiz to test out your coding skills. This consists of 20 multiple choice questions.
+                Each
+                carrying equal marks. You will be presented with a series of questions, each with multiple options, and you must select the correct answer from the choices provided. This JavaScript quiz serve as a valuable learning tool, helping developers and
+                aspiring programmers to reinforce their understanding of JavaScript concepts in a fun and engaging way.
+                They are often used in educational settings, coding bootcamps, or as self-assessment tools for
+                individuals looking to test and enhance their JavaScript proficiency.</p>
+            
+        </div>
+        <div>
+            <a href="test.html"><Button onclick="startTestNow()" id="xyz">Begin Test!</Button></a>
+        </div>
+
+    </section>
+
+
+</body>
+
+</html>
